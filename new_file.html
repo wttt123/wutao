@@ -8,14 +8,13 @@
 	</script>
 	<body>
 		<div id="app">
-			<h1>猜数字小游戏</h1>
-			请输入你想要猜的数字：<br>
+			请输入你学校的名字：<br>
 			<!-- 答案是:{{keynumber}} -->
 			<br />
 			<input v-model="number"/>
-			<li v-if="keynumber1.indexOf(number)!=-1&&keynumber2.indexOf(number)!=-1">985、211</li>
-			<li v-else-if="keynumber1.indexOf(number)!=-1">985</li>
-			<li v-else-if="keynumber2.indexOf(number)!=-1">211</li>
+			<li v-if="keynumber1.indexOf(number)!=-1&&keynumber2.indexOf(number)!=-1">你的学校是985、211</li>
+			<li v-else-if="keynumber1.indexOf(number)!=-1">你的学校是985</li>
+			<li v-else-if="keynumber2.indexOf(number)!=-1">你的学校是211</li>
 		</div>
 		<script type="text/javascript">
 			let v=new Vue({
