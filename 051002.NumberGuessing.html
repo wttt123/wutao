@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<script type="text/javascript" src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			请输入一个0~10的数字：
+			<input type="text" v-model="userKey" @keyup.enter="show1()" name="" id="ceshi"/>
+			
+		</div>
+		<script type="text/javascript">
+			let v = new Vue({
+				el:"#app",
+				data:{
+					userKey:''
+				},
+				methods:{
+					show1(){
+						var x = Math.round(Math.random()*10);
+						if(v.userKey.valueOf()==x){
+							alert("恭喜你猜对了，本次产生的数字为："+x);
+						}else{
+							alert("很可惜你猜错了，再试试吧！"+x);
+						}
+						
+					}
+				}
+			})
+			
+		</script>
+	</body>
+</html>
